@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_config_settings_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='integration']" position="after">
+                <div>
+                    <h2>Uber API Settings</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6">
+                            <div class="form-group">
+                                <label for="uber_base_url">Uber base URL API</label>
+                                <field name="uber_base_url" placeholder="Enter Uber base URL API"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="uber_client_id">Uber Client ID</label>
+                                <field name="uber_client_id" placeholder="Enter Uber Client ID"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="uber_client_secret">Uber Client Secret</label>
+                                <field name="uber_client_secret" placeholder="Enter Uber Client Secret"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="form-group">
+                                <label for="uber_api_auth">Uber Auth API Path</label>
+                                <field name="uber_api_auth" placeholder="Enter Path Auth API"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="uber_api_order">Uber Order API Path</label>
+                                <field name="uber_api_order" placeholder="Enter Path Uber Order API"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="uber_access_token">Uber Access Token</label>
+                                <field name="uber_access_token" readonly="1" placeholder="Access Token will be generated"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="uber_token_expiry">Token Expiry</label>
+                                <field name="uber_token_expiry" readonly="1" placeholder="Token Expiry will be set"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

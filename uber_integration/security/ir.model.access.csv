@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_uber_api,access_uber_api,model_uber_api,base.group_user,1,1,1,1
+access_uber_eats_order,access_uber_eats_order,model_uber_eats_order,base.group_user,1,1,1,1
+access_uber_eats_store,access_uber_eats_store,model_uber_eats_store,base.group_user,1,1,1,1
+access_uber_eats_eater,access_uber_eats_eater,model_uber_eats_eater,base.group_user,1,1,1,1
+access_uber_eats_cart_item,access_uber_eats_cart_item,model_uber_eats_cart_item,base.group_user,1,1,1,1
+access_uber_eats_fulfillment_issue,access_uber_eats_fulfillment_issue,model_uber_eats_fulfillment_issue,base.group_user,1,1,1,1
+access_uber_eats_payment,access_uber_eats_payment,model_uber_eats_payment,base.group_user,1,1,1,1
+access_uber_eats_delivery,access_uber_eats_delivery,model_uber_eats_delivery,base.group_user,1,1,1,1
