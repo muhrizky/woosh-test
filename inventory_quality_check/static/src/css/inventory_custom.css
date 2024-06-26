@@ -1,0 +1,9 @@
+/* custom_styles.css */
+.button_quality_check {
+    background-color: #300000;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

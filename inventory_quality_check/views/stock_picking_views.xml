@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <!-- Load custom CSS file -->
+        <template id="assets_backend" name="custom assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/css" href="/inventory_quality_check/static/src/css/inventory_custom.css"/>
+            </xpath>
+        </template>
+        <!-- Extend the form view of stock.picking -->
+        <record id="view_picking_form_inherited" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherited</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header//button[@name='button_validate']" position="after">
+                    <button name="action_quality_check" type="object" string="Quality Check" states="assigned" class="oe_highlight button_quality_check" groups="inventory_quality_check.group_stock_quality_manager"/>
+                </xpath>
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="is_quality_checked" groups="inventory_quality_check.group_stock_quality_manager" attrs="{'invisible': [('state','!=','quality_check')]}"/>
+                </xpath>
+                <xpath expr="//button[@name='do_print_picking']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('state', 'not in', ('assigned', 'partially_available','quality_check'))]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('state', 'not in', ('assigned', 'confirmed', 'partially_available', 'draft', 'waiting','quality_check'))]}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

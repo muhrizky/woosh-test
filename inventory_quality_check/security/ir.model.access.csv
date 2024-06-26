@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_picking_quality_manager,access.stock.picking.quality.manager,model_stock_picking,inventory_quality_check.group_stock_quality_manager,1,1,1,1

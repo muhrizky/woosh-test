@@ -1,0 +1,14 @@
+<odoo>
+    <data noupdate="0">
+        <!-- Define security groups -->
+        <record model="ir.module.category" id="module_category_stock_quality">
+            <field name="description">Helps you manage your Stock Quality</field>
+            <field name="sequence">8</field>
+            <field name="name">Stock Quality</field>
+        </record>
+        <record id="group_stock_quality_manager" model="res.groups">
+            <field name="name">Stock Quality Manager</field>
+            <field name="category_id" ref="inventory_quality_check.module_category_stock_quality"/>
+        </record>
+    </data>
+</odoo>
