@@ -11,6 +11,7 @@ This project includes several modules for inventory quality check, custom api, a
   - [Inventory Quality Check](#inventory-quality-check)
   - [Custom API](#custom-api)
   - [Uber Integration](#uber-integration)
+- [API Documentation](#API-Documentation)
 
 ## Installation
 
@@ -74,6 +75,9 @@ This module integrates Uber's API into Odoo, facilitating the retrieval of Uber 
 #### Demo
 [Watch the demo video](https://www.loom.com/share/c9d700fec2cf4c3eb3539b642a52a7c3?sid=32dbff86-48e2-46d3-a5d9-73e63816a0a3)
 
+## API Documentation
+This API allows you to manage data efficiently.
+The Postman collection is included in this repository for your convenience. For detailed online documentation and API endpoints, please visit the [Woosh Skill Test API Collection on Postman](https://documenter.getpostman.com/view/10909317/2sA3dsmDzU).
 
 ### Notes
 * Complete documentation and usage guides will be provided later.
